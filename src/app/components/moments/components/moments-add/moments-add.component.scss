@@ -1,0 +1,21 @@
+#container-moments-new{
+	width: 450px;
+	margin: auto;
+	border: 1px solid black;
+}
+
+div.form{
+	display: flex;
+	flex-direction: column;
+	margin: 2em;
+}
+
+h1{
+	text-align: center;
+}
+
+button[type=submit]{
+	padding: 5px;
+	display: block;
+	margin: auto;
+}	

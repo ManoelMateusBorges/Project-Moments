@@ -1,0 +1,9 @@
+.message{
+	width: 800px;
+	background-color: rgba(255, 0, 0, 0.414);
+	position: absolute;
+	top: 25%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999 !important;
+}

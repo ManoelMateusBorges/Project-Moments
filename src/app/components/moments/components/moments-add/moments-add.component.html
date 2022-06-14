@@ -1,0 +1,26 @@
+<div id="container-moments-new">
+	<h1>Compartilhe seu momento</h1>
+	<div>
+		<form [formGroup]="formMoments" (ngSubmit)="submit()" #form="ngForm">
+			<div class="form">
+				<label  for="titulo">Título</label>
+				<input formControlName="title" type="text" name="" id="titulo">
+				<div *ngIf="formValidator('title', form)">
+					Campo obrigatório
+				</div>
+			</div>
+			<div class="form">
+				<label for="description">Descrição</label>
+				<textarea formControlName="description" name="description" id="description" cols="30" rows="5"></textarea>
+				<div *ngIf="formValidator('description', form)">
+					Campo obrigatório
+				</div>
+			</div>
+			<div class="form">
+				<label >Coloque a foto que mais marcou</label>
+				<input type="file" [accept]="acceptImg" (change)="onFileSelected($event)">
+			</div>
+			<button type="submit">enviar</button>
+		</form>
+	</div>
+</div>
