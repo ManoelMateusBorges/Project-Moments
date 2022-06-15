@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { MomentsService } from "../../service/moments.service";
 import { MessageService } from "../../service/message.service"
+import { Router } from "@angular/router";
 
 @Component({
 	selector: 'app-moments',
@@ -12,7 +13,8 @@ export class MomentsComponent {
 
 	constructor(
 		private http: MomentsService,
-		private messageService: MessageService
+		private messageService: MessageService,
+		private router: Router
 		){ }
 
 	sendMomentsDataHttp(event: any){
@@ -26,7 +28,9 @@ export class MomentsComponent {
 			
 		// );
 		
-		this.messageService.addMessage('enviada !!!!')
+		this.messageService.addMessage('enviada !!!!');
+
+		// this.router.navigate(['/'])
 	}
 	
 }

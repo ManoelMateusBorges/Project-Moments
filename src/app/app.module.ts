@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/herder.component';
 import { HomeComponent } from './components/home/home.component';
 import { MomentsModule } from './components/moments/moments.module';
+import { MessageComponent } from './components/messages/message.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { MomentsModule } from './components/moments/moments.module';
     AboutComponent,
     HomeComponent,
     FooterComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,

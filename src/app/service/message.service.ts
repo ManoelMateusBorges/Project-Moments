@@ -5,18 +5,18 @@ import { Injectable } from "@angular/core";
 })
 
 export class MessageService {
-	
 	infoMessage: string = "";
 
-	addMessage(msg: string){
+	addMessage(msg: string) {
 		this.infoMessage = msg;
 
-		setTimeout(() => { 
-				this.clearMessage();
-		  }, 4000);		
+		setTimeout(() => {
+			this.clearMessage();
+		}, 4000);
 	}
+	
 
-	clearMessage(){
+	clearMessage() {
 		this.infoMessage = "";
 	}
 }

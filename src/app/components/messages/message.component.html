@@ -1,3 +1,3 @@
-<div class="message" *ngIf="message.infoMessage">
+<div class="message"  *ngIf="message.infoMessage" (click)="message.clearMessage()">
 	<p> {{ message.infoMessage }} </p>
 </div>

@@ -9,7 +9,7 @@ import { MessageComponent } from "../messages/message.component"
 	declarations: [
 		MomentsComponent,
 		MomentsAddComponent,
-		MessageComponent
+		
 	],
 	imports: [
 		CommonModule,
