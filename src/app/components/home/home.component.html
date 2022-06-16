@@ -1,1 +1,21 @@
-<h1>Home</h1>
+<div class="home">
+	<h1>Home</h1>
+	<div class="home-container" *ngIf="moments.length > 0; else noMoments">
+		<div *ngFor="let item of moments">
+			<div class="moment-container">
+				<div>
+					<h2>{{ item.title }}</h2>
+					<i>{{ item.created_at }}</i>
+					<h3>{{ item.description }}</h3>
+					<img [src]="apiUrl +'uploads/'+ item.image " [alt]="item.description" class="img-container"
+						width="400">
+					<h4>{{ item.comments!.length }}</h4>
+					<a routerLink="moments/{{item.id}}">Comentar</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<ng-template #noMoments>
+		<h2>No Moments</h2>
+	</ng-template>
+</div>

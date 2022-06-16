@@ -24,9 +24,7 @@ export class MomentsComponent {
 		form.append('description', event.description)
 		form.append('image', event.image);
 		
-		// this.http.createMoments(form).subscribe(
-			
-		// );
+		this.http.createMoments(form).subscribe();
 		
 		this.messageService.addMessage('enviada !!!!');
 
