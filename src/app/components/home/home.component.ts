@@ -13,14 +13,15 @@ import { environment } from "src/environments/environment";
 export class HomeComponent implements OnInit {
 
 	apiUrl = environment.baseApiUrl;
-	
-	 moments: Moments[] = [];
+
+	allMoments: Moments[] = []
+	moments: Moments[] = [];
 
 	constructor(private momentsService: MomentsService) { }
 
-	ngOnInit() {
+	async ngOnInit() {
 		this.momentsService.getMoments().subscribe((moments) => {
-			
+
 			const data = moments.data;
 
 			data.map((item) => {
@@ -28,8 +29,19 @@ export class HomeComponent implements OnInit {
 			})
 
 			this.moments = data;
-			
+			this.allMoments = data;
+
 		})
+	}
+
+	pesquisaMoment(e: Event): void {
+		const target = e.target as HTMLInputElement;
+		const value = target.value;
+		
+		this.moments = this.allMoments.filter((moment) => {
+			return moment.title.toLowerCase().includes(value)
+		})
+		
 	}
 
 }

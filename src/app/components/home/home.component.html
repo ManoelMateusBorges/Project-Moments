@@ -1,6 +1,9 @@
 <div class="home">
 	<h1>Home</h1>
-	<div class="home-container" *ngIf="moments.length > 0; else noMoments">
+	<form >
+		<input type="text" (keyup)="pesquisaMoment($event)" placeholder="pesquise um momento">
+	</form>
+	<div class="home-container" *ngIf="moments.length > 0 ; else noMoments">
 		<div *ngFor="let item of moments">
 			<div class="moment-container">
 				<div>
